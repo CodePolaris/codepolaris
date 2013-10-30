@@ -1,0 +1,18 @@
+= form_tag '/application/send_contact_email' do
+  %span.label= label_tag :name, 'Name'
+  = text_field_tag :name
+  %br
+
+  %span.label= label_tag :email, 'Email'
+  = text_field_tag :email
+  %br
+
+  %span.label= label_tag :subject, 'Name'
+  = text_field_tag :subject
+  %br
+
+  %span.label= label_tag :message, 'Message'
+  = text_area_tag :message
+  %br
+
+  = submit_tag 'send'

@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+  %body
+    Mensagem de
+    %strong= @guest[:name]
+    %br
+    &nbsp
+    %strong= - @quest[:email]
+    %br
+    %br
+    Assunto:
+    &nbsp
+    = @guest[:subject]
+    %br
+    %br
+
+
+    %p
+      = @guest[:message]

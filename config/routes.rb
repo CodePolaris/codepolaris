@@ -1,4 +1,13 @@
 Polaris::Application.routes.draw do
+
+  resources :application do
+    collection do
+      post :send_contact_email
+    end
+  end
+
+  get '/contact_form' => 'application#contact_form'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

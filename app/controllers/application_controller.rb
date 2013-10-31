@@ -19,6 +19,10 @@ class ApplicationController < ActionController::Base
   end
   # end mailer
 
+  def home
+    render '/static/home'
+  end
+
   def about
     render '/static/about'
   end

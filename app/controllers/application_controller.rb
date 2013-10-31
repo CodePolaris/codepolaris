@@ -11,6 +11,9 @@ class ApplicationController < ActionController::Base
     redirect_to '/contact_form', notice: "Thanks for your message!"
   end
 
+  def index
+  end
+
   def contact_form
     render '/contact_mailer/contact_form'
   end

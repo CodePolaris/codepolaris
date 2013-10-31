@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  # Guest contact email
+  # begin mailer - Guest contact email
   def send_contact_email
     ContactMailer.contact_email(params).deliver
 
@@ -13,6 +13,19 @@ class ApplicationController < ActionController::Base
 
   def contact_form
     render '/contact_mailer/contact_form'
+  end
+  # end mailer
+
+  def about
+    render '/static/about'
+  end
+
+  def services
+    render '/static/services'
+  end
+
+  def portfolio
+    render '/static/portfolio'
   end
 
 end

@@ -8,6 +8,11 @@ Polaris::Application.routes.draw do
 
   get '/contact_form' => 'application#contact_form'
 
+  # Static pages
+  get '/about' => 'application#about'
+  get '/services' => 'application#services'
+  get '/portfolio'=> 'application#portfolio'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.min
+//= require jquery.form
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require jquery.flexslider-min
+//= require jquery.tweet
+//= require jquery.fancybox.pack
+//= require jquery.fancybox-media
+//= require script
 //= require_tree .

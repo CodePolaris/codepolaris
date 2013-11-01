@@ -438,7 +438,7 @@ hr.invisible {
 /* ----------------------- */
 /* - 2.1 body style - */
 body {
-  background: #f2f2f4 url(../images/backgrounds/bedge_grunge.png);
+  background: #f2f2f4 url(backgrounds/bedge_grunge.png);
 }
 
 /* - 2.2 wrappers and containers - */
@@ -520,11 +520,11 @@ body {
 }
 .section-alt:before {
   top: 0;
-  background-image: url(../images/top-shadow.png);
+  background-image: url(top-shadow.png);
 }
 .section-alt:after {
   bottom: 0;
-  background-image: url(../images/bottom-shadow.png);
+  background-image: url(bottom-shadow.png);
 }
 .section-alt:last-child:after {
   background-image: none;

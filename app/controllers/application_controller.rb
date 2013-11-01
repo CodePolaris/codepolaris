@@ -14,22 +14,17 @@ class ApplicationController < ActionController::Base
   def contact_form
     render '/contact_mailer/contact_form'
   end
-  # end mailer
 
   def home
-    render '/static/home'
   end
 
   def about
-    render '/static/about'
   end
 
   def services
-    render '/static/services'
   end
 
   def portfolio
-    render '/static/portfolio'
   end
 
 end

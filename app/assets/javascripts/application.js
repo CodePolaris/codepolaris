@@ -21,4 +21,5 @@
 //= require jquery.fancybox.pack
 //= require jquery.fancybox-media
 //= require script
+//= require all
 //= require_tree .

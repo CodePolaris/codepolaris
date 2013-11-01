@@ -1,5 +1,7 @@
 Polaris::Application.routes.draw do
 
+  root 'application#home'
+
   resources :application do
     collection do
       post :send_contact_email
@@ -18,7 +20,6 @@ Polaris::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

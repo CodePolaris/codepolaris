@@ -24,6 +24,15 @@
         // Fancybox init
         fancyboxInit();
 
+        $('.nav.pull-right .anchor a').click(function(event) {
+          var id = $(this).attr("href").substring(1);
+
+          var target = $(id).offset().top;
+
+          $('html, body').animate({scrollTop:target}, 500);
+          event.preventDefault();
+        });
+
     });
 
 $(window).load(function() {

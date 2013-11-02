@@ -19,6 +19,7 @@
   <link href="apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
   <div class="wrapper">
@@ -198,18 +199,3 @@
     } catch(err) {}
   </script>
 </body>
-
-
-<!-- !!!
-%html
-  %head
-    %title Polaris
-
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tags
-
-  %body
-    = flash_messages
-
- -->

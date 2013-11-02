@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ApplicationController < ActionController::Base
 
   # Prevent CSRF attacks by raising an exception.
@@ -13,7 +14,7 @@ class ApplicationController < ActionController::Base
 
     if @errors.blank?
       ContactMailer.contact_email(params).deliver
-      redirect_to contact_path, notice: "Thanks for your message!"
+      redirect_to contact_path, notice: "Em breve entraremos em contato para marcar uma reunião."
     else
       render '/contact_mailer/contact_form'
     end

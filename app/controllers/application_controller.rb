@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   # begin mailer - Guest contact email
   def send_contact_email
     @errors = []
-    @errors << :name if params[:name].blank?
-    @errors << :email if params[:email].blank?
+    @errors << :name    if params[:name].blank?
+    @errors << :email   if params[:email].match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i).nil?
     @errors << :message if params[:message].blank?
 
     if @errors.blank?

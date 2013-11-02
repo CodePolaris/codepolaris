@@ -1,0 +1,59 @@
+<section class="section section-alt" style='padding: 40px 0;'>
+  <div class="container-fluid">
+    <div class="section-header">
+      <h1>
+        Vamos
+        <small class="light">conversar?</small>
+      </h1>
+    </div>
+    <p class="lead text-center">
+      Phasellus imperdiet volutpat elementum. Morbi sodales, lectus vel gravida viverra, erat urna pulvinar ipsum, non porta lorem nisi a est. Maecenas sodales volutpat sapien, at dignissim ligula pretium nec.
+    </p>
+    <hr>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= form_tag '/application/send_contact_email', id: "contactForm", class: "contact-form", novalidate: "" do %>
+          <div class="controls controls-row">
+            <div class="control-group span6">
+              <%= text_field_tag :name, nil, class: "span12", placeholder: "seu nome" %>
+            </div>
+            <div class="control-group span6">
+              <%= email_field_tag :email, nil, class: "span12", placeholder: "seu email" %>
+            </div>
+          </div>
+          <div class="controls controls-row">
+            <div class="control-group span12">
+              <%= text_field_tag :subject, nil, class: "span12", placeholder: "assunto" %>
+            </div>
+          </div>
+          <div class="controls controls-row">
+            <div class="control-group span12">
+              <%= text_area_tag :messagem, nil, class: "span12", placeholder: "assunto", rows: 5 %>
+            </div>
+          </div>
+          <div class="controls controls-row">
+            <div class="control-group span12">
+              <button class="btn btn-primary" name="submitButton" type="submit" onclick="$('#contactForm').submit();">
+                Enviar Mensagem
+              </button>
+            </div>
+          </div>
+        <% end %>
+        <div id="messages"></div>
+      </div>
+      <div class="span6 contact-details" style='min-height: 150px;'>
+        <ul class="icons">
+          <li>
+            <h4>
+              <i class="icon-envelope"></i>
+              Detalhes
+            </h4>
+            <p>
+              Email: contato@codepolaris.com
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

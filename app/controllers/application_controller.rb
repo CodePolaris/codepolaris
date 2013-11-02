@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def send_contact_email
     ContactMailer.contact_email(params).deliver
 
-    redirect_to '/contact_form', notice: "Thanks for your message!"
+    redirect_to contact_path, notice: "Thanks for your message!"
   end
 
   def contact_form
@@ -16,15 +16,6 @@ class ApplicationController < ActionController::Base
   end
 
   def home
-  end
-
-  def about
-  end
-
-  def services
-  end
-
-  def portfolio
   end
 
 end

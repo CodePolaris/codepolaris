@@ -22,8 +22,8 @@
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("./fonts/fontawesome-webfont.eot?v=3.0.1");
-  src: url("./fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("./fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("./fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  src: url("fonts/fontawesome-webfont.eot?v=3.0.1");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1312,8 +1312,8 @@ ul.icons li [class*=" icon-"] {
  */
 @font-face {
   font-family: 'Font-Awesome-Corp';
-  src: url("./fonts/corp/fontawesome-corp-webfont.eot");
-  src: url("./fonts/corp/fontawesome-corp-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/corp/fontawesome-corp-webfont.woff") format("woff"), url("./fonts/corp/fontawesome-corp-webfont.ttf") format("truetype"), url("./fonts/corp/fontawesome-corp-webfont.svg#Font-Awesome-More") format("svg");
+  src: url("fonts/corp/fontawesome-corp-webfont.eot");
+  src: url("fonts/corp/fontawesome-corp-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/corp/fontawesome-corp-webfont.woff") format("woff"), url("fonts/corp/fontawesome-corp-webfont.ttf") format("truetype"), url("fonts/corp/fontawesome-corp-webfont.svg#Font-Awesome-More") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1411,8 +1411,8 @@ ul.icons li [class*=" icon-"] {
  */
 @font-face {
   font-family: 'Font-Awesome-Ext';
-  src: url("./fonts/ext/fontawesome-ext-webfont.eot");
-  src: url("./fonts/ext/fontawesome-ext-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/ext/fontawesome-ext-webfont.woff") format("woff"), url("./fonts/ext/fontawesome-ext-webfont.ttf") format("truetype"), url("./fonts/ext/fontawesome-ext-webfont.svg#Font-Awesome-More") format("svg");
+  src: url("fonts/ext/fontawesome-ext-webfont.eot");
+  src: url("fonts/ext/fontawesome-ext-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ext/fontawesome-ext-webfont.woff") format("woff"), url("fonts/ext/fontawesome-ext-webfont.ttf") format("truetype"), url("fonts/ext/fontawesome-ext-webfont.svg#Font-Awesome-More") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1530,8 +1530,8 @@ ul.icons li [class*=" icon-"] {
  */
 @font-face {
   font-family: 'Font-Awesome-Social';
-  src: url("./fonts/social/fontawesome-social-webfont.eot");
-  src: url("./fonts/social/fontawesome-social-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/social/fontawesome-social-webfont.woff") format("woff"), url("./fonts/social/fontawesome-social-webfont.ttf") format("truetype"), url("./fonts/social/fontawesome-social-webfont.svg#Font-Awesome-More") format("svg");
+  src: url("fonts/social/fontawesome-social-webfont.eot");
+  src: url("fonts/social/fontawesome-social-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/social/fontawesome-social-webfont.woff") format("woff"), url("fonts/social/fontawesome-social-webfont.ttf") format("truetype"), url("fonts/social/fontawesome-social-webfont.svg#Font-Awesome-More") format("svg");
   font-weight: normal;
   font-style: normal;
 }

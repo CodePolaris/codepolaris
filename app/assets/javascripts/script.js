@@ -254,51 +254,7 @@ function portfolioFilters() {
 }
 
 function setupContactForm() {
-    // bind submit handler to form
-    $('#contactForm').on('submit', function(e) {
-        // prevent native submit
-        e.preventDefault();
-        // clear all inputs tooltips
-        $( ':input' ).tooltip( 'destroy' );
-        // clear all errors
-        $( '.control-group' ).removeClass( 'error' );
-
-        // submit the form
-        $(this).ajaxSubmit({
-            url: 'contact_me.php',
-            type: 'post',
-            dataType: 'json',
-            beforeSubmit: function() {
-                // disable submit button
-                $( ':input[name="submitButton"]' ).attr( 'disabled','disabled' );
-            },
-            success: function( response, status, xhr, form ) {
-                if( response.status == "ok" ) {
-                    // mail sent ok - display sent message
-                    for( var msg in response.messages ) {
-                        showInputMessage( response.messages[msg], 'success' );
-                    }
-                    // clear the form
-                    form[0].reset();
-                }
-                else {
-                    for( var error in response.messages ) {
-                        showInputMessage( response.messages[error], 'error' );
-                    }
-                }
-                // make button active
-                $( ':input[name="submitButton"]' ).removeAttr( 'disabled' );
-            },
-            error: function() {
-                for( var error in response.messages ) {
-                    showInputMessage( response.messages[error], 'error' );
-                }
-                // make button active
-                $( ':input[name="submitButton"]' ).removeAttr( 'disabled' );
-            }
-        })
-        return false;
-    });
+    return false;
 }
 
 function showInputMessage( message, status ) {

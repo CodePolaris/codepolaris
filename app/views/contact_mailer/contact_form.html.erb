@@ -12,23 +12,26 @@
     <hr>
     <div class="row-fluid">
       <div class="span6">
-        <%= form_tag '/application/send_contact_email', id: "contactForm", class: "contact-form", novalidate: "" do %>
+        <%= form_tag send_contact_email_path, id: "contactForm", class: "contact-form", novalidate: "" do %>
           <div class="controls controls-row">
-            <div class="control-group span6">
-              <%= text_field_tag :name, nil, class: "span12", placeholder: "seu nome" %>
+            <div class="control-group span6 <%= 'error' if @errors.include?(:name) %>">
+              <%= text_field_tag :name, params[:name], class: "span12", placeholder: "seu nome" %>
+              <%= render 'input_error', position: 'top' if @errors.include?(:name)%>
             </div>
-            <div class="control-group span6">
-              <%= email_field_tag :email, nil, class: "span12", placeholder: "seu email" %>
-            </div>
-          </div>
-          <div class="controls controls-row">
-            <div class="control-group span12">
-              <%= text_field_tag :subject, nil, class: "span12", placeholder: "assunto" %>
+            <div class="control-group span6 <%= 'error' if @errors.include?(:email) %>">
+              <%= email_field_tag :email, params[:email], class: "span12", placeholder: "seu email" %>
+              <%= render 'input_error', position: 'top' if @errors.include?(:email)%>
             </div>
           </div>
           <div class="controls controls-row">
             <div class="control-group span12">
-              <%= text_area_tag :messagem, nil, class: "span12", placeholder: "conte-nos o que tem em mente...", rows: 5 %>
+              <%= text_field_tag :subject, params[:subject], class: "span12", placeholder: "assunto" %>
+            </div>
+          </div>
+          <div class="controls controls-row">
+            <div class="control-group span12 <%= 'error' if @errors.include?(:message) %>">
+              <%= text_area_tag :message, params[:message], class: "span12", placeholder: "conte-nos o que tem em mente...", rows: 5 %>
+              <%= render 'input_error', position: 'right' if @errors.include?(:message)%>
             </div>
           </div>
           <div class="controls controls-row">

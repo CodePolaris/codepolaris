@@ -2,12 +2,7 @@ Polaris::Application.routes.draw do
 
   root 'application#home'
 
-  resources :application do
-    collection do
-      post :send_contact_email
-    end
-  end
-
+  post '/contact' => 'application#send_contact_email', as: :send_contact_email
   get '/contact' => 'application#contact_form', as: :contact
 
   # Static pages

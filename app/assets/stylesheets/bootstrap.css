@@ -4354,11 +4354,11 @@ input[type="submit"].btn.btn-mini {
   filter: alpha(opacity=80);
 }
 .tooltip.top {
-  margin-top: -3px;
+  margin-top: -41px;
   padding: 5px 0;
 }
 .tooltip.right {
-  margin-left: 3px;
+  margin-left: 45%;
   padding: 0 5px;
 }
 .tooltip.bottom {

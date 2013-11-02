@@ -3,15 +3,9 @@
   %head
   %body
     Mensagem de
-    %strong= @guest[:name] if @guest[:name].present?
+    %strong= @guest[:name]
     %br
-    &nbsp
-    %strong= @guest[:email] if @guest[:email].present?
-    %br
-    %br
-    Assunto:
-    &nbsp
-    = @guest[:subject] if @guest[:subject].present?
+    %strong= @guest[:email]
     %br
     %br
 

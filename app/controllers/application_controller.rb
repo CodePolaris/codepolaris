@@ -6,12 +6,21 @@ class ApplicationController < ActionController::Base
 
   # begin mailer - Guest contact email
   def send_contact_email
-    ContactMailer.contact_email(params).deliver
+    @errors = []
+    @errors << :name if params[:name].blank?
+    @errors << :email if params[:email].blank?
+    @errors << :message if params[:message].blank?
 
-    redirect_to contact_path, notice: "Thanks for your message!"
+    if @errors.blank?
+      ContactMailer.contact_email(params).deliver
+      redirect_to contact_path, notice: "Thanks for your message!"
+    else
+      render '/contact_mailer/contact_form'
+    end
   end
 
   def contact_form
+    @errors = []
     render '/contact_mailer/contact_form'
   end
 

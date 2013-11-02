@@ -33,7 +33,7 @@ $(window).load(function() {
     // selector for ie rounded images fallback
     if (window.PIE) {
         $('.img-circle , .flex-control-nav a , .well-package-heading , span.tag').each(function() {
-            PIE.attach(this);
+            // PIE.attach(this);
         });
 
         $('.img-circle').on('mouseenter',function(){

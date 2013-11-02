@@ -8,7 +8,7 @@ Polaris::Application.routes.draw do
     end
   end
 
-  get '/contact_form' => 'application#contact_form'
+  get '/contact' => 'application#contact_form'
 
   # Static pages
   get '/home' => 'application#home'

@@ -1,29 +1,25 @@
-set :application, 'codepolaris'
-set :repo_url, 'git@github.com:marcosserpa/codepolaris.git'
+set :application, "codepolaris.com"
+set :repo_url, 'git://github.com/marcosserpa/codepolaris.git'
 
+set :user, "polaris"
+set :use_sudo, false
+set :deploy_to, "/home/#{user}/#{application}"
+set :scm, :git
+
+server application, :app, :web, :db, :primary => true
 set :branch, "master" #proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :deploy_via, :remote_cache # Otherwise always clone the repository at the deploy
 
-# set :deploy_to, '/var/www/my_app'
-# set :scm, :git
-
-# set :format, :pretty
-# set :log_level, :debug
-# set :pty, true
-
-# set :linked_files, %w{config/database.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-# set :keep_releases, 5
-
 namespace :deploy do
+  desc 'Start application'
+  task :start do ; end
+
+  desc 'Stop application'
+  task :stop do ; end
 
   desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
     end
   end
 
@@ -39,3 +35,8 @@ namespace :deploy do
   after :finishing, 'deploy:cleanup'
 
 end
+
+# Unicorn tasks
+require 'capistrano-unicorn'
+after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
+after 'deploy:restart', 'unicorn:restart'  # app preloaded

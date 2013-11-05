@@ -36,6 +36,7 @@ group :development do
   gem 'thin'
   gem 'better_errors'
   gem 'pry'
+  gem 'capistrano-unicorn', :git => 'https://github.com/sosedoff/capistrano-unicorn.git', :branch => 'master', :require => false
 end
 
 # Structure

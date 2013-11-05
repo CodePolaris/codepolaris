@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require jquery.flexslider-min
 //= require jquery.fancybox.pack

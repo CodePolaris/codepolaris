@@ -36,7 +36,7 @@ group :development do
   gem 'thin'
   gem 'better_errors'
   gem 'pry'
-  gem 'capistrano-unicorn', :git => 'https://github.com/sosedoff/capistrano-unicorn.git', :branch => 'master', :require => false
+  #gem 'capistrano-unicorn', :git => 'https://github.com/sosedoff/capistrano-unicorn.git', :branch => 'master', :require => false
 end
 
 # Structure
@@ -51,7 +51,9 @@ group :production do
 end
 
 # Use Capistrano for deployment
-gem 'capistrano'
+
+gem 'capistrano', '~> 2.5.18'
+gem 'rvm-capistrano'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

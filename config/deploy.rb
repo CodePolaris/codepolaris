@@ -1,44 +1,54 @@
-require 'bundler/capistrano'
+require "bundler/capistrano"
+require "rvm/capistrano"
 
-set :application, "codepolaris.com"
-set :repo_url, 'git://github.com/marcosserpa/codepolaris.git'
+server "162.243.66.30", :web, :app, :db, primary: true
 
+set :application, "codepolaris"
 set :user, "polaris"
+set :port, 2000
+set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_via, :remote_cache
 set :use_sudo, false
-set :deploy_to, "/home/#{user}/#{application}"
-set :scm, :git
 
-server application, :app, :web, :db, :primary => true
-set :branch, "master" #proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-set :deploy_via, :remote_cache # Otherwise always clone the repository at the deploy
+set :scm, "git"
+set :repository, "git@github.com:marcosserpa/#{application}.git"
+set :branch, "master"
+
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+
+after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 namespace :deploy do
-  desc 'Start application'
-  task :start do ; end
-
-  desc 'Stop application'
-  task :stop do ; end
-
-  desc 'Restart application'
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  %w[start stop restart].each do |command|
+    desc "#{command} unicorn server"
+    task command, roles: :app, except: {no_release: true} do
+      run "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+  task :setup_config, roles: :app do
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    puts "Now edit the config files in #{shared_path}."
+  end
+  after "deploy:setup", "deploy:setup_config"
+
+  task :symlink_config, roles: :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+  after "deploy:finalize_update", "deploy:symlink_config"
+
+  desc "Make sure local git is in sync with remote."
+  task :check_revision, roles: :web do
+    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+      puts "WARNING: HEAD is not the same as origin/master"
+      puts "Run `git push` to sync changes."
+      exit
     end
   end
-
-  after :finishing, 'deploy:cleanup'
-
+  before "deploy", "deploy:check_revision"
 end
-
-# Unicorn tasks
-require 'capistrano-unicorn'
-after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
-after 'deploy:restart', 'unicorn:restart'  # app preloaded

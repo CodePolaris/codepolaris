@@ -61,4 +61,5 @@ Polaris::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match "*path", to: "application#routing_error", via: :all
 end

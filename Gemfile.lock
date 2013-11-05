@@ -49,7 +49,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
     highline (1.6.20)
     hike (1.2.3)

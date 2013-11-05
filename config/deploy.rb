@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :application, "codepolaris.com"
 set :repo_url, 'git://github.com/marcosserpa/codepolaris.git'
 

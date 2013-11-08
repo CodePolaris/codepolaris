@@ -8,14 +8,13 @@ set :user, "polaris"
 set :port, 22
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :copy
-set :use_sudo, false
+set :use_sudo, true
 set :rvm_ruby_string, "ruby-2.0.0-p247"
 
 set :scm, "git"
 set :repository, "git@github.com:marcosserpa/codepolaris.git"
 set :branch, "master"
 set :rvm_type, :system
-
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
@@ -68,7 +67,7 @@ namespace :deploy do
   end
 
   task :nginx_restart do
-    # run "cd #{release_path} && service nginx restart"
+    run "cd #{release_path} && sudo service nginx restart"
   end
 
   after 'deploy:update_code', 'deploy:precompile_assets', 'deploy:update_sitemap', 'deploy:nginx_restart'

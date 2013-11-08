@@ -3,10 +3,11 @@
   <div class="container-fluid">
     <div class="section-header">
       <h1>
-        Nossa
-        <small class="light">metodologia</small>
+        <%= t('title.our') %>
+        <small class="light"><%= t('title.methodology') %></small>
       </h1>
     </div>
+
     <div class="row-fluid">
       <div class="span6">
         <div class="flexslider margin-bottom" data-flex-directions="hide" data-flex-speed="10000" id="work">
@@ -14,35 +15,40 @@
             <li>
               <%= image_tag("assets/devices/security-process-1.png", alt: "some image") %>
             </li>
+
             <li>
               <%= image_tag("assets/devices/ipad-iphone.png", alt: "some image") %>
             </li>
+
             <li>
               <%= image_tag("assets/devices/macbook.png", alt: "some image") %>
             </li>
           </ul>
         </div>
       </div>
+
       <div class="span6">
         <ul class="icons">
           <li>
             <h4>
               <i class="icon-check"></i>
-              Foco em Qualidade
+              <%= t('title.focus_on_quality') %>
             </h4>
             <p>
-              Entendemos que todo desvio de qualidade implica em retrabalho e insatisfação do cliente. Por isso <strong>não</strong> abrimos mão da qualidade nos sistemas que desenvolvemos.
+            <%= t('text.focus_on_quality') %>
             </p>
           </li>
+
           <li>
             <h4>
               <i class="icon-dashboard"></i>
-              Desenvolvimento Ágil
+              <%= t('title.agile') %>
             </h4>
             <p>
-              Utilizando as práticas de Scrum e Kanban realizamos entregas constantes para avaliação e refinamento pelo cliente, criando um processo mais flexível.
+              <%= t('text.agile') %>
             </p>
           </li>
+
           <li>
             <h4>
               <i class="icon-mobile-phone"></i>
@@ -52,6 +58,7 @@
               Nossas aplicações possuem layout responsivo, isto é, se adaptam ao tamanho da tela do usuário. Faça um teste e acesse o nosso site de um tablet ou celular.
             </p>
           </li>
+
           <li>
             <h4>
               <i class="icon-cog"></i>
@@ -61,6 +68,7 @@
               Não abandonamos seu projeto quando este é concluído. Realizamos o acompanhamento a medida que o seu negócio cresce.
             </p>
           </li>
+
           <li>
             <h4>
               <i class="icon-wrench"></i>

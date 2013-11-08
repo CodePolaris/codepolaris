@@ -2,16 +2,18 @@
   <div class="container-fluid">
     <div class="section-header">
       <h1>
-        Vamos
-        <small class="light">Trabalhar?</small>
+        <%= t('title.lets_go') %>
+        <small class="light"><%= t('title.work?') %></small>
       </h1>
     </div>
+
     <p class="lead text-center">
-      Conte-nos sobre o seu projeto e vamos construí-lo juntos. Estamos sempre prontos para escutar e desenvolver suas ideias em conjunto. E então, vamos trabalhar juntos?
+      <%= t('title.work_together') %> 
     </p>
+
     <div class="text-center">
       <div class="btn btn-large btn-primary" onclick='window.location.href = "/contact";'>
-        Quero conversar &nbsp;
+        <%= t('text.want_to_talk') %> &nbsp;
         <i class="icon-lightbulb"></i>
       </div>
     </div>

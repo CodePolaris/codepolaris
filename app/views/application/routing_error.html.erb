@@ -4,6 +4,7 @@
     <div class="super-hero-unit">
       <figure>
         <%= image_tag("assets/landscapes/landscape-3-1250x600.jpg", alt: "some image") %>
+
         <figcaption class="flex-caption">
           <h1 class="hyper animated fadeinup delayed">
             404
@@ -13,6 +14,7 @@
     </div>
   </div>
 </section>
+
 <!-- 404 content -->
 <section class="section section-padded">
   <div class="container-fluid">
@@ -22,13 +24,15 @@
 
       </h1>
     </div>
+
     <p class="lead text-center">
-      A página que você requisitou não existe
+      <%= t('text.404_error') %>
     </p>
+
     <div class="text-center">
       <a class="btn btn-primary btn-large pull-center" href="/">
         <i class="icon-home"></i>
-        Voltar para Home
+        <%= t('link.back_to_home') %>
       </a>
     </div>
   </div>

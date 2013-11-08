@@ -38,11 +38,11 @@
             </h1>
             <div class="nav-collapse collapse">
               <ul class="nav pull-right" data-no-turbolink>
-                <li ><%= link_to "Home", root_path %></li>
-                <li class="anchor"><%= link_to "Especialidades", '/#services' %>
-                <li class="anchor"><%= link_to "Metodologia", '/#work' %>
-                <li class="anchor"><%= link_to "Vamos", '/#lets_work' %>
-                <li ><%= link_to "Contato", contact_path %>
+                <li ><%= link_to t('link.home'), root_path %></li>
+                <li class="anchor"><%= link_to t('link.services'), '/#services' %>
+                <li class="anchor"><%= link_to t('link.methodology'), '/#work' %>
+                <li class="anchor"><%= link_to t('link.lets_work'), '/#lets_work' %>
+                <li ><%= link_to t('link.contact'), contact_path %>
               </ul>
             </div>
           </div>
@@ -69,11 +69,12 @@
               </span>
             </h3>
             <p>
-              contato@codepolaris.com
+              <%= t('contact.email') %>
               <br/>
-              Rio de Janeiro, Brasil
+
+              <%= t('contact.address') %>
               <br/>
-              &copy; Copyright 2013
+              &copy; <%= t('contact.copyrights') %>
             </p>
           </div>
         </div>

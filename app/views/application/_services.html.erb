@@ -3,10 +3,11 @@
   <div class="container-fluid">
     <div class="section-header">
       <h1>
-        Nossas
-        <small class="light">especialidades</small>
+        <%= t('title.our_plural') %>
+        <small class="light"><%= t('title.specialties') %></small>
       </h1>
     </div>
+
     <ul class="unstyled row-fluid">
       <li class="span4">
         <div class="round-box box-big">
@@ -15,11 +16,13 @@
             <i class="icon-cloud"></i>
           </span>
         </div>
-        <h2 class="text-center">Sistemas Web</h2>
+
+        <h2 class="text-center"><%= t('title.web_systems') %></h2>
         <p class="lead text-center">
-          Adoramos construir aplicações Web, desde as mais simples às mais complexas.
+          <%= t('text.web_systems') %>
         </p>
       </li>
+
       <li class="span4">
         <div class="round-box box-big">
           <span class="box-inner">
@@ -27,11 +30,13 @@
             <i class="icon-magic"></i>
           </span>
         </div>
-        <h2 class="text-center">Concepção de ideias</h2>
+
+        <h2 class="text-center"><%= t('title.design_ideas') %></h2>
         <p class="lead text-center">
-          Como em um passe de mágica desenvolvemos um MVP para que você teste sua brilhante ideia.
+          <%= t('text.design_ideas') %>
         </p>
       </li>
+
       <li class="span4">
         <div class="round-box box-big">
           <span class="box-inner">
@@ -39,9 +44,10 @@
             <i class="icon-cogs"></i>
           </span>
         </div>
-        <h2 class="text-center">Manutenção</h2>
+
+        <h2 class="text-center"><%= t('title.support') %></h2>
         <p class="lead text-center">
-          Queremos acompanhar e incrementar sua aplicação. Afinal, os sistemas estão sempre em desenvolvimento.
+          <%= t('text.support') %>
         </p>
       </li>
     </ul>

@@ -68,7 +68,7 @@ namespace :deploy do
   end
 
   task :nginx_restart do
-    run "cd #{release_path} && sudo service nginx restart"
+    run "cd #{release_path} && service nginx restart"
   end
 
   after 'deploy:update_code', 'deploy:precompile_assets', 'deploy:update_sitemap', 'deploy:nginx_restart'

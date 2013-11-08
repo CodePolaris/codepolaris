@@ -51,15 +51,13 @@ namespace :deploy do
       mkdir -p #{shared_path}/assets &&
       ln -s #{shared_path}/assets #{latest_release}/public/assets
     CMD
-    set(:answer, Capistrano::CLI.ui.ask("Do you want to skip asset compilation? (only 'yes' will skip)") )
-    if answer != 'yes'
-      run_locally "rake assets:precompile"
-      run_locally "cd public; tar -zcvf assets.tar.gz assets"
-      top.upload "public/assets.tar.gz", "#{shared_path}", :via => :scp
-      run "cd #{shared_path}; tar -zxvf assets.tar.gz; rm assets.tar.gz"
-      run_locally "rm public/assets.tar.gz"
-      run_locally "rm -rf public/assets"
-    end
+
+    run_locally "rake assets:precompile"
+    run_locally "cd public; tar -zcvf assets.tar.gz assets"
+    top.upload "public/assets.tar.gz", "#{shared_path}", :via => :scp
+    run "cd #{shared_path}; tar -zxvf assets.tar.gz; rm assets.tar.gz"
+    run_locally "rm public/assets.tar.gz"
+    run_locally "rm -rf public/assets"
   end
 
   task :update_sitemap do
@@ -67,7 +65,7 @@ namespace :deploy do
   end
 
   task :nginx_restart do
-    run "cd #{release_path} && sudo service nginx restart"
+    run "cd #{release_path} && #{try_sudo} service nginx restart"
   end
 
   after 'deploy:update_code', 'deploy:precompile_assets', 'deploy:update_sitemap', 'deploy:nginx_restart'

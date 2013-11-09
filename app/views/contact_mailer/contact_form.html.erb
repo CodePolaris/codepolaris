@@ -2,12 +2,12 @@
   <div class="container-fluid">
     <div class="section-header">
       <h1>
-        Vamos
-        <small class="light">conversar?</small>
+        <%= t('title.lets_go') %>
+        <small class="light"><%= t('title.talk?') %></small>
       </h1>
     </div>
     <p class="lead text-center">
-      Este é o seu espaço para nos contar sobre a sua ideia. Sinta-se livre para nos contar o que quiser. Não temos medo de emails grandes e estamos aqui para ajudar.
+      <%= t('text.lets_talk?') %>
     </p>
     <hr>
     <div class="row-fluid">
@@ -15,7 +15,7 @@
         <div class="span12">
           <div class="alert alert-success">
             <button class="close" data-dismiss="alert" type="button">×</button>
-              <strong>Muito obrigado!</strong>
+              <strong><%= t('message.thank_you') %></strong>
               <%= flash[:notice] %>
           </div>
         </div>
@@ -26,29 +26,29 @@
         <%= form_tag send_contact_email_path, id: "contactForm", class: "contact-form", novalidate: "" do %>
           <div class="controls controls-row">
             <div class="control-group span6 <%= 'error' if @errors.include?(:name) %>">
-              <%= text_field_tag :name, params[:name], class: "span12", placeholder: "seu nome" %>
+              <%= text_field_tag :name, params[:name], class: "span12", placeholder: <%= t('placeholder.your_name')%> %>
               <%= render 'input_error', position: 'top' if @errors.include?(:name)%>
             </div>
             <div class="control-group span6 <%= 'error' if @errors.include?(:email) %>">
-              <%= email_field_tag :email, params[:email], class: "span12", placeholder: "seu email" %>
+              <%= email_field_tag :email, params[:email], class: "span12", placeholder: <%= t('placeholder.your_email') %> %>
               <%= render 'input_error', position: 'top' if @errors.include?(:email)%>
             </div>
           </div>
           <div class="controls controls-row">
             <div class="control-group span12">
-              <%= text_field_tag :subject, params[:subject], class: "span12", placeholder: "assunto" %>
+              <%= text_field_tag :subject, params[:subject], class: "span12", placeholder: <%= t('placeholder.subject') %> %>
             </div>
           </div>
           <div class="controls controls-row">
             <div class="control-group span12 <%= 'error' if @errors.include?(:message) %>">
-              <%= text_area_tag :message, params[:message], class: "span12", placeholder: "conte-nos o que tem em mente...", rows: 5 %>
+              <%= text_area_tag :message, params[:message], class: "span12", placeholder: <%= t('placeholder.message') %>, rows: 5 %>
               <%= render 'input_error', position: 'right' if @errors.include?(:message)%>
             </div>
           </div>
           <div class="controls controls-row">
             <div class="control-group span12">
               <button class="btn btn-primary" name="submitButton" type="submit" onclick="$('#contactForm').submit();">
-                Enviar Mensagem
+                <%= t('link.send') %>
               </button>
             </div>
           </div>
@@ -60,10 +60,10 @@
           <li>
             <h4>
               <i class="icon-envelope"></i>
-              Detalhes
+              <%= t('contact.address') %>
             </h4>
             <p>
-              Email: contato@codepolaris.com
+              <%= t('contact.email') %>
             </p>
           </li>
         </ul>

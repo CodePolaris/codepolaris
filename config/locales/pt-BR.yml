@@ -10,6 +10,7 @@ pt-BR:
     home: "Home"
     contact: "Contato"
     back_to_home: "Voltar para Home"
+    send: "Enviar Mensagem"
   title:
     lets_go: "Vamos"
     work?: "Trabalhar?"
@@ -22,6 +23,9 @@ pt-BR:
     methodology: "metodologia"
     focus_on_quality: "Foco em Qualidade"
     agile: "Desenvolvimento Ágil"
+    multiplatform_layout: "Layout Multiplataforma"
+    rails: "Ruby on Rails"
+    talk?: "conversar?"
   text:
     404_error: "A página que você requisitou não existe"
     pendent_field: "Campo necessário"
@@ -32,7 +36,18 @@ pt-BR:
     support: "Queremos acompanhar e incrementar sua aplicação. Afinal, os sistemas estão sempre em desenvolvimento."
     focus_on_quality: "Entendemos que todo desvio de qualidade implica em retrabalho e insatisfação do cliente. Por isso <strong>não</strong> abrimos mão da qualidade nos sistemas que desenvolvemos."
     agile: "Utilizando as práticas de Scrum e Kanban realizamos entregas constantes para avaliação e refinamento pelo cliente, criando um processo mais flexível."
+    multiplatform_layout: "Nossas aplicações possuem layout responsivo, isto é, se adaptam ao tamanho da tela do usuário. Faça um teste e acesse o nosso site de um tablet ou celular."
+    support_methodology: "Não abandonamos seu projeto quando este é concluído. Realizamos o acompanhamento a medida que o seu negócio cresce."
+    rails: "Desenvolvemos em Ruby on Rails porque precisamos de rapidez e flexibilidade, além de contar com amplo suporte da comunidade open source."
+    lets_talk?: "Este é o seu espaço para nos contar sobre a sua ideia. Sinta-se livre para nos contar o que quiser. Não temos medo de emails grandes e estamos aqui para ajudar."
   promo:
     web_systems: "Sistemas web"
     innovation: "Inovação"
     multiplatform: "Multiplataforma"
+  message:
+    thank_you: "Muito obrigado!"
+  placeholder:
+    your_name: "seu nome"
+    your_email: "seu email"
+    subject: "assunto"
+    message: "conte-nos o que tem em mente..."

@@ -46,6 +46,7 @@ pt-BR:
     multiplatform: "Multiplataforma"
   message:
     thank_you: "Muito obrigado!"
+    contact_response: "Em breve entraremos em contato para marcar uma reunião."
   placeholder:
     your_name: "seu nome"
     your_email: "seu email"

@@ -1,23 +1,54 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  contact:
+    address: "Rio de Janeiro"
+    email: "contato@codepolaris.com"
+    copyrights: "Copyright codepolairs 2013"
+  link:
+    services: "Services"
+    methodology: "Methodology"
+    lets_work: "Let's Work?"
+    home: "Home"
+    contact: "Contact"
+    back_to_home: "Back to Home"
+    send: "Send Message"
+  title:
+    lets_go: "Let's"
+    work?: "Work?"
+    our_plural: "Our"
+    our: "Our"
+    specialties: "specialties"
+    web_systems: "Web Systems"
+    design_ideas: "Design ideas"
+    support: "Support"
+    methodology: "methodology"
+    focus_on_quality: "Focus on Quality"
+    agile: "Agile Development"
+    multiplatform_layout: "Multiplatform Layout"
+    rails: "Ruby on Rails"
+    talk?: "talk?"
+  text:
+    404_error: "The page you requested does not exist"
+    pendent_field: "Pendent field"
+    work_together: "Tell us about your project and we will build it together. We are always ready to listen and develop your ideas together. Then, let's work together?"
+    want_to_talk: "I wanna talk"
+    web_systems: "We love building web applications, from the simplest to the most complex."
+    design_ideas: "Like magically we develop a MVP for you to test your brilliant idea."
+    support: "We want to monitor and improve your application. Even accomplished, systems are always in development."
+    focus_on_quality: "We understand that every quality deviation implies rework and customer dissatisfaction. So  we <strong> do not </ strong> live aside the quality systems we develop."
+    agile: "Using the practices of Scrum and Kanban we perform constant deliveries for evaluation and refinement by the customer, creating a more flexible process."
+    multiplatform_layout: "Our applications have responsive layout, i.e., adapt to the screen size of the user. Take a test and visit our site from a tablet or mobile."
+    support_methodology: "Do not abandon your project when it is completed. We conducted the follow-up as your business grows."
+    rails: "We develop in Ruby on Rails because we need speed and flexibility, in addition to having widespread support from the open source community."
+    lets_talk?: "This is your space to tell us about your idea. Feel free to tell us what you want. We are not afraid of big emails and we're here to help."
+  promo:
+    web_systems: "Web systems"
+    innovation: "Innovation"
+    multiplatform: "Multiplatform"
+  message:
+    thank_you: "Thank you so much!"
+    contact_response: "Soon we will contact you to arrange a meeting."
+  placeholder:
+    your_name: "your name"
+    your_email: "your email"
+    subject: "subject"
+    message: "tell us what's on your mind..."

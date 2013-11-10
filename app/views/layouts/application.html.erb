@@ -22,6 +22,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='fullwidth'>
+  <!-- Change locale -->
+  <div class='language_flags'>
+    <%= link_to (image_tag "usa.png", hover: 'English'), :locale=>'en' %>
+    <%= link_to (image_tag "brazil.png", hover: 'Portuguese'), :locale=>'pt-BR' %>
+  </div>
+
   <div class="wrapper">
     <!-- Page Header -->
     <header id="masthead">
@@ -42,7 +48,7 @@
                 <li class="anchor"><%= link_to t('link.services'), '/#services' %>
                 <li class="anchor"><%= link_to t('link.methodology'), '/#work' %>
                 <li class="anchor"><%= link_to t('link.lets_work'), '/#lets_work' %>
-                <li ><%= link_to t('link.contact'), contact_path %>
+                <li class="anchor"><%= link_to t('link.contact'), '/#contact_form' %>
               </ul>
             </div>
           </div>

@@ -441,10 +441,18 @@ body {
   background: #f2f2f4 url(backgrounds/subtle_grunge.png);
 }
 
+.language_flags {
+  float: right;
+  margin-right: 100px;
+}
+
 /* - 2.2 wrappers and containers - */
 .wrapper {
   background: white;
-  margin: 40px auto;
+  margin-top: 10px;
+  margin-bottom: 40px auto;
+  margin-right: 40px auto;
+  margin-left: 40px auto;
   width: 90%;
   max-width: 1250px;
   overflow: hidden;

@@ -59,3 +59,4 @@ gem 'rvm-capistrano'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'runscope-rb'

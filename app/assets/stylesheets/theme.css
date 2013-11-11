@@ -654,6 +654,7 @@ body {
 /* 4. FOOTER */
 /* --------- */
 #footer {
+  margin-top: 15px;
   text-shadow: 1px 1px 0px white;
 }
 #footer a {

@@ -24,8 +24,8 @@ Polaris::Application.configure do
     domain: 'mail.google.com',
     authentication: 'plain',
     enable_starttls_auto: true,
-    user_name: 'marcosserpa@gmail.com',
-    password: 'Vascao_2011'
+    user_name: 'contato@codepolaris.com',
+    password: 'CodePolaris'
   }
 
   # Print deprecation notices to the Rails logger.

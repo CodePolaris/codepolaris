@@ -25,8 +25,11 @@
 <body class='fullwidth'>
   <!-- Change locale -->
   <div class='language_flags'>
-    <%= link_to (image_tag "usa.png", hover: 'English'), l: 'en' %>
-    <%= link_to (image_tag "brazil.png", hover: 'Portuguese'), l: 'pt-BR' %>
+    <% if I18n.locale == :en %>
+      <%= link_to (image_tag "brazil.png", hover: 'Portuguese'), l: 'pt-BR' %>
+    <% else %>
+      <%= link_to (image_tag "usa.png", hover: 'English'), l: 'en' %>
+    <% end %>
   </div>
   <br/>
 

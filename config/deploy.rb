@@ -68,7 +68,7 @@ namespace :deploy do
     run "cd #{release_path} && #{try_sudo} service nginx restart"
   end
 
-  after 'deploy:update_code', 'deploy:precompile_assets', 'deploy:update_sitemap', 'deploy:nginx_restart'
-
   before "deploy", "deploy:check_revision"
+  after 'deploy:update_code', 'deploy:precompile_assets', 'deploy:update_sitemap', 'deploy:nginx_restart'
+  
 end

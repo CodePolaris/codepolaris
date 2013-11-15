@@ -1,4 +1,4 @@
-<section class="section section-padded" id='contact_form'>
+<section class="section section-padded" id='contact_us'>
   <div class="container-fluid">
     <div class="section-header">
       <h1>
@@ -26,16 +26,16 @@
 
     <div class="row-fluid">
       <div class="span6">
-        <%= form_tag send_contact_email_path, id: "contactForm", class: "contact-form", novalidate: "" do %>
+        <%= form_tag send_contact_email_path(anchor: 'contact_us'), id: "contactForm", class: "contact-form", novalidate: "" do %>
           <div class="controls controls-row">
-            <div class="control-group span6 <%= 'error' if session[:errors].present? && session[:errors].include?(:name) %>">
+            <div class="control-group span6 <%= 'error' if @errors.present? && @errors.include?(:name) %>">
               <%= text_field_tag :name, params[:name], class: "span12", placeholder: t('placeholder.your_name') %>
-              <%= render 'input_error', position: 'top' if session[:errors].present? && session[:errors].include?(:name)%>
+              <%= render 'input_error', position: 'top' if @errors.present? && @errors.include?(:name)%>
             </div>
 
-            <div class="control-group span6 <%= 'error' if session[:errors].present? && session[:errors].include?(:email) %>">
+            <div class="control-group span6 <%= 'error' if @errors.present? && @errors.include?(:email) %>">
               <%= email_field_tag :email, params[:email], class: "span12", placeholder: t('placeholder.your_email') %>
-              <%= render 'input_error', position: 'top' if session[:errors].present? && session[:errors].include?(:email)%>
+              <%= render 'input_error', position: 'top' if @errors.present? && @errors.include?(:email)%>
             </div>
           </div>
 
@@ -46,9 +46,9 @@
           </div>
 
           <div class="controls controls-row">
-            <div class="control-group span12 <%= 'error' if session[:errors].present? && session[:errors].include?(:message) %>">
+            <div class="control-group span12 <%= 'error' if @errors.present? && @errors.include?(:message) %>">
               <%= text_area_tag :message, params[:message], class: "span12", placeholder: t('placeholder.message'), rows: 5 %>
-              <%= render 'input_error', position: 'right' if session[:errors].present? && session[:errors].include?(:message) %>
+              <%= render 'input_error', position: 'right' if @errors.present? && @errors.include?(:message) %>
             </div>
           </div>
 

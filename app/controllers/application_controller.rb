@@ -15,22 +15,17 @@ class ApplicationController < ActionController::Base
     @errors << :email   if params[:email].match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i).nil?
     @errors << :message if params[:message].blank?
 
-    session[:errors] = @errors
     if @errors.blank?
       ContactMailer.contact_email(params).deliver
-      redirect_to '#contact_form', notice: t('message.contact_response')
+      redirect_to home_path, notice: t('message.contact_response')
     else
-      redirect_to '#contact_form'
+      render 'home'
     end
-  end
-
-  def contact_form
-    @errors = []
-    render '#contact_form'
   end
   # end mailer
 
   def home
+    @errors = []
   end
 
   def routing_error

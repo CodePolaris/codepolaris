@@ -26,9 +26,9 @@
   <!-- Change locale -->
   <div class='language_flags'>
     <% if I18n.locale == :en %>
-      <%= link_to (image_tag "brazil.png", hover: 'Portuguese'), l: 'pt-BR' %>
+      <%= link_to (image_tag "brazil.png", hover: 'Portuguese'), set_locale_path(l: 'pt-BR') %>
     <% else %>
-      <%= link_to (image_tag "usa.png", hover: 'English'), l: 'en' %>
+      <%= link_to (image_tag "usa.png", hover: 'English'), set_locale_path(l: 'en') %>
     <% end %>
   </div>
   <br/>

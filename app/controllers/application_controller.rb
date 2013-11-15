@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 class ApplicationController < ActionController::Base
 
-  before_filter :set_locale
+  before_filter :get_locale
 
   respond_to :html
   # Prevent CSRF attacks by raising an exception.
@@ -33,10 +33,13 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     if ['en', 'pt-BR'].include?(params[:l])
-      I18n.locale = params[:l]
-    else
-      I18n.locale = I18n.default_locale
+      session[:locale] = params[:l]
     end
+    redirect_to root_path
+  end
+
+  def get_locale
+    I18n.locale = session[:locale] if session[:locale].present?
   end
 
 end

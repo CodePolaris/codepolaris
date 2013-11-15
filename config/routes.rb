@@ -2,10 +2,10 @@ Polaris::Application.routes.draw do
 
   root 'application#home'
 
-  post '/home' => 'application#send_contact_email', as: :send_contact_email
-
-  # Static pages
   get '/home' => 'application#home', as: :home
+  post '/home' => 'application#send_contact_email', as: :send_contact_email
+  get '/set_locale' => 'application#set_locale', as: :set_locale
+  # Static pages
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

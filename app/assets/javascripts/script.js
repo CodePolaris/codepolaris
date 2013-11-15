@@ -37,6 +37,10 @@
 
 $(window).load(function() {
     // Initallize flexslider
+    if (!isMobile()) {
+        $('#intro').attr('style', 'min-height: 403px');
+    }
+
     flexInit();
 
     // selector for ie rounded images fallback
@@ -156,9 +160,13 @@ function fancyboxInit() {
     });
 }
 
-// funcrion to hide the address bar on mobile devices
+function isMobile() {
+    return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i));
+}
+
+// function to hide the address bar on mobile devices
 function hideBar() {
-    if( ( navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i) ) ) {
+    if(isMobile()) {
         if(window.addEventListener){
             window.addEventListener("load",function() {
                 // Set a timeout...

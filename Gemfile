@@ -54,7 +54,7 @@ end
 
 # Use Capistrano for deployment
 
-gem 'capistrano', '~> 2.5.18'
+gem 'capistrano', '~> 2.15.4'
 gem 'rvm-capistrano'
 
 # Use debugger

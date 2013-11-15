@@ -90,7 +90,7 @@ function flexInit() {
             sliderAnimation = !slider.attr('data-flex-animation') ? "slide" : slider.attr('data-flex-animation'),
 
             //data-flex-speed: defines the animation speed, 7000 (default) or any number
-            sliderSpeed = !slider.attr('data-flex-speed') ? 7000 : slider.attr('data-flex-speed'),
+            sliderSpeed = !slider.attr('data-flex-speed') ? 4000 : slider.attr('data-flex-speed'),
 
             //data-flex-directions: defines the visibillity of the nanigation arrows, hide (default) or show
             sliderDirections = slider.attr('data-flex-directions') == "hide" ? false : true,

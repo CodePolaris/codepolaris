@@ -46,18 +46,7 @@ namespace :deploy do
   end
 
   task :precompile_assets do
-    run <<-CMD
-      rm -rf #{latest_release}/public/assets &&
-      mkdir -p #{shared_path}/assets &&
-      ln -s #{shared_path}/assets #{latest_release}/public/assets
-    CMD
-
-    run_locally "rake assets:precompile"
-    run_locally "cd public; tar -zcvf assets.tar.gz assets"
-    top.upload "public/assets.tar.gz", "#{shared_path}", :via => :scp
-    run "cd #{shared_path}; tar -zxvf assets.tar.gz; rm assets.tar.gz"
-    run_locally "rm public/assets.tar.gz"
-    run_locally "rm -rf public/assets"
+    run "cd #{release_path} && RAILS_ENV=production bundle exec rake assets:precompile"
   end
 
   task :update_sitemap do

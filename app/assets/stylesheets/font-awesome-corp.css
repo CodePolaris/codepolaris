@@ -4,8 +4,8 @@
  */
 @font-face {
   font-family: 'Font-Awesome-Corp';
-  src: url("/assets/corp/fontawesome-corp-webfont.eot");
-  src: url("/assets/corp/fontawesome-corp-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/corp/fontawesome-corp-webfont.woff") format("woff"), url("/assets/corp/fontawesome-corp-webfont.ttf") format("truetype"), url("/assets/corp/fontawesome-corp-webfont.svg#Font-Awesome-More") format("svg");
+  src: url("/fonts/corp/fontawesome-corp-webfont.eot");
+  src: url("/fonts/corp/fontawesome-corp-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/corp/fontawesome-corp-webfont.woff") format("woff"), url("/fonts/corp/fontawesome-corp-webfont.ttf") format("truetype"), url("/fonts/corp/fontawesome-corp-webfont.svg#Font-Awesome-More") format("svg");
   font-weight: normal;
   font-style: normal;
 }

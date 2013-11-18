@@ -4,8 +4,8 @@
  */
 @font-face {
   font-family: 'Font-Awesome-Social';
-  src: url("/assets/social/fontawesome-social-webfont.eot");
-  src: url("/assets/social/fontawesome-social-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/social/fontawesome-social-webfont.woff") format("woff"), url("/assets/social/fontawesome-social-webfont.ttf") format("truetype"), url("/assets/social/fontawesome-social-webfont.svg#Font-Awesome-More") format("svg");
+  src: url("/fonts/social/fontawesome-social-webfont.eot");
+  src: url("/fonts/social/fontawesome-social-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/social/fontawesome-social-webfont.woff") format("woff"), url("/fonts/social/fontawesome-social-webfont.ttf") format("truetype"), url("/fonts/social/fontawesome-social-webfont.svg#Font-Awesome-More") format("svg");
   font-weight: normal;
   font-style: normal;
 }

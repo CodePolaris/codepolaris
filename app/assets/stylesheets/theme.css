@@ -438,7 +438,7 @@ hr.invisible {
 /* ----------------------- */
 /* - 2.1 body style - */
 body {
-  background: #f2f2f4 url(backgrounds/subtle_grunge.png);
+  background: #f2f2f4 image-url("backgrounds/subtle_grunge.png");
 }
 
 .language_flags {
@@ -528,11 +528,11 @@ body {
 }
 .section-alt:before {
   top: 0;
-  background-image: url(top-shadow.png);
+  background-image: image-url("top-shadow.png");
 }
 .section-alt:after {
   bottom: 0;
-  background-image: url(bottom-shadow.png);
+  background-image: image-url("bottom-shadow.png");
 }
 .section-alt:last-child:after {
   background-image: none;
@@ -998,7 +998,7 @@ body {
 }
 
 .contact-details {
-  background: url(contact.png) no-repeat top right;
+  background: image-url("contact.png") no-repeat top right;
 }
 
 /* - 5.3 Sidebar - */

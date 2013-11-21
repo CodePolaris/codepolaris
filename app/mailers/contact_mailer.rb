@@ -5,7 +5,7 @@ class ContactMailer < ActionMailer::Base
   def contact_email(params)
     @guest = params
 
-    mail(to: 'contato@codepolaris.com', from: @guest[:email],
+    mail(to: 'contato@codepolaris.com; rodrigo@codepolaris.com; julio@codepolaris.com; marcos@codepolaris.com;', from: @guest[:email],
          subject: @guest[:subject].present? ? @guest[:subject] : 'Site Contact')
   end
 

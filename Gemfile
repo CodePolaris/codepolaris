@@ -57,6 +57,7 @@ end
 gem 'capistrano', '~> 2.15.4'
 gem 'rvm-capistrano'
 
-# Use debugger
+# Use debugger and monitoring
 # gem 'debugger', group: [:development, :test]
 gem 'runscope-rb'
+gem 'newrelic_rpm'

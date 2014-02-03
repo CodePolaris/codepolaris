@@ -1,0 +1,148 @@
+<!-- About Us -->
+<section class="section section-padded", id='about_us'>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="section-header">
+          <h1>
+            <%= t('title.about') %>
+            <small class="light"><%= t('title.us') %></small>
+          </h1>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <%= image_tag("polaris.jpg", alt: "polaris", class: "push-bottom") %>
+        </div>
+        <div class="span6">
+          <p class="lead">
+            <%= t('text.about_us') %>
+          </p>
+          <ul class="icons lead icons-small">
+            <li>
+              <i class="icon-ok gray"></i>
+              <%= t('text.individual') %>
+            </li>
+            <li>
+              <i class="icon-ok gray"></i>
+              <%= t('text.software') %>
+            </li>
+            <li>
+              <i class="icon-ok gray"></i>
+              <%= t('text.client') %>
+            </li>
+            <li>
+              <i class="icon-ok gray"></i>
+              <%= t('text.changes') %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our people -->
+  <section class="section section-alt section-padded", id='team'>
+    <div class="container-fluid">
+      <div class="section-header">
+        <h1>
+          <%= t('title.team') %>
+          <small class="light"><%= t('title.skills') %></small>
+        </h1>
+      </div>
+      <ul class="unstyled row-fluid">
+        <li class="span4">
+          <div class="round-box box-big">
+            <span class="box-inner">
+              <%= image_tag("julio.jpg", alt: "júlio", class: "img-circle") %>
+            </span>
+          </div>
+          <h3 class="text-center">
+            Júlio Cesar
+            <small class="block">
+              Ruby Developer
+            </small>
+          </h3>
+          <p>
+          <%= t('text.team_julio') %>
+          </p>
+          <ul class="inline text-center big social-icons">
+            <li>
+              <a data-iconcolor="#00a0d1" href="https://twitter.com/bueno_julio">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a data-iconcolor="#0B1114" href="http://github.com/julioce">
+                <i class="icon-github"></i>
+              </a>
+            </li>
+            <li>
+              <a data-iconcolor="#5FB0D5" href="http://br.linkedin.com/pub/j%C3%BAlio-bueno/85/110/b6">
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="span4">
+          <div class="round-box box-big">
+            <span class="box-inner">
+              <%= image_tag("quito.jpg", alt: "marcos", class: "img-circle") %>
+            </span>
+          </div>
+          <h3 class="text-center">
+            Marcos Serpa
+            <small class="block">
+              Ruby Developer
+            </small>
+          </h3>
+          <p>
+            <%= t('text.team_marcos', :href => link_to(t('enterprise.mobits'), "http://mobits.com.br")) %>
+          </p>
+          <ul class="inline big text-center social-icons">
+            <li>
+              <a data-iconcolor="#00a0d1" href="https://twitter.com/MarcosSerpa">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a data-iconcolor="#0B1114" href="https://github.com/marcosserpa">
+                <i class="icon-github"></i>
+              </a>
+            </li>
+            <li>
+              <a data-iconcolor="#5FB0D5" href="http://br.linkedin.com/pub/marcos-serpa/40/80b/14b/">
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="span4">
+          <div class="round-box box-big">
+            <span class="box-inner">
+              <%= image_tag("rodrigo.jpg", alt: "rodrigo", class: "img-circle") %>
+            </span>
+          </div>
+          <h3 class="text-center">
+            Rodrigo Assis
+            <small class="block">
+              Ruby Developer
+            </small>
+          </h3>
+          <p>
+            <%= t('text.team_rodrigo', :href => link_to(t('enterprise.mobits'), "http://mobits.com.br")) %>
+          </p>
+          <ul class="inline big text-center social-icons">
+            <li>
+              <a data-iconcolor="#0B1114" href="https://github.com/rodrigoassis">
+                <i class="icon-github"></i>
+              </a>
+            </li>
+            <li>
+              <a data-iconcolor="#5FB0D5" href="http://br.linkedin.com/pub/rodrigo-assis/60/464/212/">
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>

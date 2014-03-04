@@ -2481,7 +2481,7 @@ ul.inline li {
 /* - 9.7 - Retina displays - */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
   body {
-    background-image: url(../images/backgrounds/bedge_grunge_@2X.png);
+    background-image: url(backgrounds/subtle_grunge_@2X.png);
     background-size: 588px 375px;
   }
 }

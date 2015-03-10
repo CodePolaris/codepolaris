@@ -67,6 +67,8 @@ pt-BR:
     your_name: "seu nome"
     your_email: "seu email"
     subject: "assunto"
+    question: "Quanto é"
+    answer: "Resposta"
     message: "conte-nos o que tem em mente..."
   enterprise:
     mobits: "Mobits"

@@ -55,7 +55,7 @@ end
 # Use Capistrano for deployment
 
 gem 'capistrano', '~> 2.15.4'
-gem 'rvm-capistrano'
+gem 'rvm-capistrano',  require: false
 
 # Use debugger and monitoring
 # gem 'debugger', group: [:development, :test]

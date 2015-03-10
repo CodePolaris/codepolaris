@@ -67,6 +67,8 @@ en:
     your_name: "your name"
     your_email: "your email"
     subject: "subject"
+    question: "What is"
+    answer: "answer"
     message: "tell us what's in your mind..."
   enterprise:
     mobits: "Mobits"

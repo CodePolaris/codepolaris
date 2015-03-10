@@ -40,9 +40,19 @@
           </div>
 
           <div class="controls controls-row">
-            <div class="control-group span12">
+            <div class="control-group span6">
               <%= text_field_tag :subject, params[:subject], class: "span12", placeholder: t('placeholder.subject') %>
             </div>
+
+            <div class="control-group span3">
+              <%= "#{t('placeholder.question')} #{@random_question} ?" %>
+            </div>
+
+            <div class="control-group span3 <%= 'error' if @errors.present? && @errors.include?(:answer) %>">
+              <%= text_field_tag :answer, params[:answer], class: "span12", placeholder: t('placeholder.answer') %>
+              <%= render 'input_error', position: 'top' if @errors.present? && @errors.include?(:answer)%>
+            </div>
+            <%= hidden_field_tag :expected_answer, @random_anwser %>
           </div>
 
           <div class="controls controls-row">

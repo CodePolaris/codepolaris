@@ -49,11 +49,7 @@ gem 'haml'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-group :production do
-  gem 'unicorn'
-end
-
+gem 'puma', '3.4.0'
 # Use Capistrano for deployment
 
 gem 'capistrano', '~> 2.15.4'

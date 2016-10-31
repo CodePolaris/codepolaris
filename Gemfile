@@ -29,6 +29,8 @@ gem 'turbolinks', '2.5.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'rails_12factor', group: :production
+
 gem 'sitemap_generator'
 
 group :doc do

@@ -60,4 +60,3 @@ gem 'rvm-capistrano',  require: false
 # Use debugger and monitoring
 # gem 'debugger', group: [:development, :test]
 gem 'runscope-rb'
-gem 'newrelic_rpm'

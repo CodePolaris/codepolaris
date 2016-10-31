@@ -782,7 +782,7 @@ body {
   position: absolute;
   width: 13px;
   height: 22px;
-  background-image: url(../images/comment-arrow.png);
+  background-image: image-url("comment-arrow.png");
   background-size: 13px 22px;
   top: 12px;
   left: 61px;
@@ -881,7 +881,7 @@ body {
   position: absolute;
   width: 13px;
   height: 22px;
-  background-image: url(../images/timeline-arrow-right.png);
+  background-image: image-url("timeline-arrow-right.png");
   background-size: 13px 22px;
   top: 50%;
   margin-top: -11px;
@@ -899,7 +899,7 @@ body {
   right: 100%;
 }
 #timeline .timeline-item:nth-child(even) .post-arrow {
-  background-image: url(../images/timeline-arrow-left.png);
+  background-image: image-url("timeline-arrow-left.png");
   left: auto;
   right: 100%;
 }
@@ -2385,7 +2385,7 @@ ul.inline li {
   #timeline .post-arrow {
     width: 22px;
     height: 13px;
-    background-image: url(../images/timeline-arrow-top.png);
+    background-image: image-url("timeline-arrow-top.png");
     background-size: 22px 13px;
     top: auto;
     bottom: 100%;
@@ -2404,7 +2404,7 @@ ul.inline li {
     margin: 0 auto 12px;
   }
   #timeline .timeline-item:nth-child(even) .post-arrow {
-    background-image: url(../images/timeline-arrow-top.png);
+    background-image: image-url("timeline-arrow-top.png");
     right: auto;
     left: 50%;
   }
@@ -2481,7 +2481,7 @@ ul.inline li {
 /* - 9.7 - Retina displays - */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
   body {
-    background-image: url(backgrounds/subtle_grunge_@2X.png);
+    background-image: image-url("backgrounds/subtle_grunge_@2X.png");
     background-size: 588px 375px;
   }
 }
